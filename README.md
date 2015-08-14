@@ -22,7 +22,4 @@ On mac/linux: Open a terminal instance in the Tboi-Ascii directory and type: "./
   
   Simon D. Levy (I think?) for the super useful [kbhit module](http://home.wlu.edu/~levys/software/kbhit.py)
   
-<<<<<<< HEAD
-  Of course, EdmundMcMillen, Florian Himsl and the Nicalis team for making the awesome [original game](http://store.steampowered.com/app/113200) and it's even more awesome [remake](http://store.steampowered.com/app/250900)!!
-=======
   Of course, EdmundMcMillen, Florian Himsl and the Nicalis team for making the awesome [original game](http://store.steampowered.com/app/113200) and it's even more awesome [remake](http://store.steampowered.com/app/250900)!!
