@@ -1,12 +1,16 @@
 import colorama
 import time
 import sys
+import kbhit
 
 class V:
 	room = 0
 	runloop = False
 	info = 0
 	ThereIsBomb = False
+	ThereAreTears = False
+	tear1 = 0
+	
 	SpawnPx = ""
 	SpawnpY = ""
 	
@@ -21,3 +25,13 @@ def exitG():
 	time.sleep(0.3)
 	print("Done")
 	sys.exit()
+	
+def pauseG():
+		#PRESS ENTER OR SPACE. Q TO EXIT
+		kb = kbhit.KBHit()
+		while True:
+			k_in = kb.getch()
+			if k_in == "\n" or k_in == " ":
+				break
+			elif k_in == "q":
+				exitG()

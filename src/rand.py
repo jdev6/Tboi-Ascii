@@ -36,5 +36,5 @@ def room():
 ///////////////''')
 	time.sleep(0.015)
 	newRoom = random.choice("12")
-	newRoom = "../rooms/" + newRoom + ".room"
+	newRoom = "./rooms/" + newRoom + ".room"
 	display.Display.loadRoom(newRoom)

@@ -6,19 +6,9 @@ import kbhit
 import colorama
 
 class Display:
-	def pause():
-		#PRESS ENTER OR SPACE. Q TO EXIT
-		kb = kbhit.KBHit()
-		while True:
-			k_in = kb.getch()
-			if k_in == "\n" or k_in == " ":
-				break
-			elif k_in == "q":
-				exitG()
-
 	def loadInfo():
-		with open("../vinfo") as f:#Load room and save it to a string list
-			V.info = [line.rstrip('\n') for line in open("../vinfo")]
+		with open("./vinfo") as f:#Load room and save it to a string list
+			V.info = [line.rstrip('\n') for line in open("./vinfo")]
 		for j in range(0, len(V.info)):
 			print(V.info[j])
 

@@ -19,50 +19,96 @@ class Bomb:
 		V.replaceInRoom(Bomb.bX, Bomb.bY, random.choice(Bomb.sprite))
 
 		Bomb.delay += 1
-		if Bomb.delay == 33:
+		if Bomb.delay == 66:
 			Bomb.explode()
 
 	def explode():
 		V.replaceInRoom(Bomb.bX, Bomb.bY, ' ')
-		#DESTROY OBJECTS:
+		#DESTROY OBJECTS, DAMAGE PLAYER:
+		print(colorama.Fore.RED, "BOOM!", colorama.Fore.RESET)
+
+		if Player.pY == Bomb.bY and Player.pX  == Bomb.bX:
+			Player.damaged(2)
 		if V.room[Bomb.bY-1][Bomb.bX] == '&':
 			V.replaceInRoom(Bomb.bX, Bomb.bY-1, ' ')
 			
+		elif V.room[Bomb.bY-1][Bomb.bX] == Player.sprite:
+			Player.damaged(2)
+			
 		if V.room[Bomb.bY+1][Bomb.bX] == '&':
 			V.replaceInRoom(Bomb.bX, Bomb.bY+1, ' ')
+			
+		elif V.room[Bomb.bY+1][Bomb.bX] == Player.sprite:
+			Player.damaged(2)
 		
 		if V.room[Bomb.bY][Bomb.bX+1] == '&':
 			V.replaceInRoom(Bomb.bX+1, Bomb.bY, ' ')
+			
+		elif V.room[Bomb.bY][Bomb.bX+1] == Player.sprite:
+			Player.damaged(2)	
 		
 		if V.room[Bomb.bY][Bomb.bX-1] == '&':
 			V.replaceInRoom(Bomb.bX-1, Bomb.bY, ' ')
+			
+		elif V.room[Bomb.bY][Bomb.bX-1] == Player.sprite:
+			Player.damaged(2)
 		
 		if V.room[Bomb.bY-2][Bomb.bX] == '&':
 			V.replaceInRoom(Bomb.bX, Bomb.bY-2, ' ')
+			
+		elif V.room[Bomb.bY-2][Bomb.bX] == Player.sprite:
+			Player.damaged(2)
 		
-		if V.room[Bomb.bY+2][Bomb.bX] == '&':
-			V.replaceInRoom(Bomb.bX, Bomb.bY+2, ' ')
+		try:
+			if V.room[Bomb.bY+2][Bomb.bX] == '&':
+				V.replaceInRoom(Bomb.bX, Bomb.bY+2, ' ')
+			
+			elif V.room[Bomb.bY+2][Bomb.bX] == Player.sprite:
+				Player.damaged(2)
+		
+		except IndexError:
+			pass
 			
 		if V.room[Bomb.bY][Bomb.bX-2] == '&':
-			V.replaceInRoom(Bomb.bX-2, Bomb.bY, ' ')	
+			V.replaceInRoom(Bomb.bX-2, Bomb.bY, ' ')
 			
-		if V.room[Bomb.bY][Bomb.bX+2] == '&':
-			V.replaceInRoom(Bomb.bX+2, Bomb.bY, ' ')
+		elif V.room[Bomb.bY][Bomb.bX-2] == Player.sprite:
+			Player.damaged(2)
+			
+		try:
+			if V.room[Bomb.bY][Bomb.bX+2] == '&':
+				V.replaceInRoom(Bomb.bX+2, Bomb.bY, ' ')
+				
+			elif V.room[Bomb.bY][Bomb.bX+2] == Player.sprite:
+				Player.damaged(2)
+		except IndexError:
+			pass
 		
 		if V.room[Bomb.bY+1][Bomb.bX+1] == '&':
 			V.replaceInRoom(Bomb.bX+1, Bomb.bY+1, ' ')
+			
+		elif V.room[Bomb.bY+1][Bomb.bX+1] == Player.sprite:
+			Player.damaged(2)
 		
 		if V.room[Bomb.bY-1][Bomb.bX-1] == '&':
 			V.replaceInRoom(Bomb.bX-1, Bomb.bY-1, ' ')
 			
+		elif V.room[Bomb.bY-1][Bomb.bX-1] == Player.sprite:
+			Player.damaged(2)
+			
 		if V.room[Bomb.bY+1][Bomb.bX-1] == '&':
 			V.replaceInRoom(Bomb.bX-1, Bomb.bY+1, ' ')
+		
+		elif V.room[Bomb.bY+1][Bomb.bX-1] == Player.sprite:
+			Player.damaged(2)
 			
 		if V.room[Bomb.bY-1][Bomb.bX+1] == '&':
 			V.replaceInRoom(Bomb.bX+1, Bomb.bY-1, ' ')
+			
+		elif V.room[Bomb.bY-1][Bomb.bX+1] == Player.sprite:
+			Player.damaged(2)
 		
-		print(colorama.Fore.RED, "BOOM!", colorama.Fore.RESET)
-		time.sleep(0.1)
+		time.sleep(0.05)
 		Bomb.bY = ""
 		Bomb.bX = ""
 		V.ThereIsBomb = False
