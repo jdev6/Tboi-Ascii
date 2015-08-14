@@ -2,7 +2,7 @@
   The binding of isaac fan-made remake made with ascii graphics on python.
 
 #How to run it:
-  First, download all the files from the button in the right side of the screen that says Master zip and extract it where you want to have the game. 
+  First, download all the files from the button in the right side of the screen that says Download zip and extract it where you want to have the game. 
   
   You'll need to have python3.4.x installed. If you don't have it, you can install it from https://www.python.org/downloads/
 Then;
