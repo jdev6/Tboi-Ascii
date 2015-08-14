@@ -5,11 +5,10 @@
   First, download all the files from the button in the right side of the screen that says Master zip and extract it where you want to have the game. 
   
   You'll need to have python3.4.x installed. If you don't have it, you can install it from https://www.python.org/downloads/
-  
-  Then: 
-<<<<<<< HEAD
-  	On windows: Double click init64.exe or init32.exe depending on the architecture of your system (though init32 should work on both)
-	On mac/linux: Open a terminal instance and type: "./init.sh"(Without the "s) (If this doesn't work you can manually type "python ./src/main.py")  
+Then;
+On windows: Double click init64.exe or init32.exe depending on the architecture of your system (though init32 should work on both)
+  	
+On mac/linux: Open a terminal instance and type: "./init.sh"(Without the "s) (If this doesn't work you can manually type "python ./src/main.py")  
   
 #Create your own rooms:
   Go to rooms folder. starting.room is the one you get when you start a run, the others are randomly chosen. 
