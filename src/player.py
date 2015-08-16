@@ -44,6 +44,7 @@ class Player:
 					V.replaceInRoom(Player.pX, Player.pY+1, ' ')
 				#Check if there is a door
 				elif V.room[Player.pY-1][Player.pX] == 'D':
+					V.ThereIsBomb = False
 					Player.CompletedRooms += 1
 					Player.SpawnPx = 7
 					Player.SpawnPy = 7
@@ -65,6 +66,7 @@ class Player:
 					V.replaceInRoom(Player.pX, Player.pY-1, ' ')
 				#Check if there is a door
 				elif V.room[Player.pY+1][Player.pX] == 'D':
+					V.ThereIsBomb = False
 					Player.CompletedRooms += 1
 					Player.SpawnPx = 7
 					Player.SpawnPy = 1
@@ -86,6 +88,7 @@ class Player:
 					V.replaceInRoom(Player.pX+1, Player.pY, ' ')
 				#Check if there is a door
 				elif V.room[Player.pY][Player.pX-1] == 'D':
+					V.ThereIsBomb = False
 					Player.CompletedRooms += 1
 					Player.SpawnPx = 13
 					Player.SpawnPy = 4
@@ -107,6 +110,7 @@ class Player:
 					V.replaceInRoom(Player.pX-1, Player.pY, ' ')
 					#Check if there is a door
 				elif V.room[Player.pY][Player.pX+1] == 'D':
+					V.ThereIsBomb = False
 					Player.CompletedRooms += 1
 					Player.SpawnPx = 1
 					Player.SpawnPy = 4
