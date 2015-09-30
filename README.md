@@ -1,5 +1,5 @@
 # Tboi-Ascii
-  The binding of isaac fan-made remake made with ascii graphics on python.
+  [ABANDONED] The binding of isaac fan-made remake made with ascii graphics on python.
 
 #How to run it:
   First, download all the files from the button in the right side of the screen that says Download zip and extract it where you want to have the game. 
